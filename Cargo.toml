@@ -1,0 +1,21 @@
+[package]
+name = "flac2alac-batch"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+walkdir = "2"
+rayon = "1"
+indicatif = "0.17"
+sha2 = "0.10"
+eframe = "0.27"
+egui = "0.27"
+tokio = { version = "1", features = ["full"] }
+rfd = "0.14"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
